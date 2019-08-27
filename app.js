@@ -22,7 +22,7 @@ var sitesArr = [
   ["Diamond Lake", 33.682725, -117.013607, "http://oceancolor.coas.oregonstate.edu/dia/lan/rgb.html" ],
   ["Pyramid Lake", 40.050989, -119.545272, "http://oceancolor.coas.oregonstate.edu/pyr/lan/rgb.html" ],
   ["Hopatcong Lake", 40.949438, -74.633434, ""],
-  ["Puget Sount", 47.726929, -122.504591,""],
+  ["Puget Sound", 47.726929, -122.504591,""],
   ["Ross Island", 45.489956, -122.659128,""],
   ["Salt Lake", 41.013424, -112.400531 ,""],
   ["Adriatic Sea", 43.243398, 17.010662 ,""]
