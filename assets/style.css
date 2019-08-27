@@ -12,12 +12,13 @@ body {
   
  }
  .marker {
-  background-image: url('./images/waterDrop.svg');
+  background-image: url('./images/droplet.svg');
   background-size: cover;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   cursor: pointer;
+  fill: green;
 }
 .mapboxgl-popup {
   max-width: 200px;
