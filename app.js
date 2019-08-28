@@ -8,11 +8,11 @@ zoom: 1.4
 });
 
 var sitesArr = [
-  ["Detroit Reservoire", 44.707006, -122.185775, "http://oceancolor.coas.oregonstate.edu/det/lan/rgb.html"],
+  ["Detroit Reservoir", 44.707006, -122.185775, "http://oceancolor.coas.oregonstate.edu/det/lan/rgb.html"],
   ["Dexter Reservoir", 43.913507, -122.785281, "http://oceancolor.coas.oregonstate.edu/dex/lan/rgb.html"],
   ["Otago", -46.002945, 170.626742,""],
   ["Geren Island", 44.794042, -122.764460, "http://oceancolor.coas.oregonstate.edu/ger/lan/rgb.html"],
-  ["San Louis Reservour", 37.052383, -121.124112, "http://oceancolor.coas.oregonstate.edu/lui/lan/rgb.html"],
+  ["San Louis Reservoir", 37.052383, -121.124112, "http://oceancolor.coas.oregonstate.edu/lui/lan/rgb.html"],
   ["Oroville Reservoir", 39.556976, -121.456147, ""],
   ["Laguna del Sauce", -34.825800, -55.066876, "http://oceancolor.coas.oregonstate.edu/sau/lan/rgb.html"],
   ["San Francisco Bay & Delta", 38.102135, -122.050026, "http://oceancolor.coas.oregonstate.edu/sfb/lan/rgb.html"],
@@ -25,7 +25,14 @@ var sitesArr = [
   ["Puget Sound", 47.726929, -122.504591,""],
   ["Ross Island", 45.489956, -122.659128,""],
   ["Salt Lake", 41.013424, -112.400531 ,""],
-  ["Adriatic Sea", 43.243398, 17.010662 ,""]
+  ["Adriatic Sea", 43.243398, 17.010662 ,""],
+  ["Abelardo L Rodriguez Mexico Reservoir", 29.066531, -110.907572, "http://oceancolor.coas.oregonstate.edu/alr/lan/rgb.html"],
+  ["Lake Tana, Ethiopia", 12.009332, 37.298897, "http://oceancolor.coas.oregonstate.edu/tan/lan/rgb.html"],
+  ["Tana River, Kenya", -0.463446, 39.635899, "http://oceancolor.coas.oregonstate.edu/tar/lan/rgb.html"],
+  ["Charles River, Boston",42.352874, -71.103053, "http://oceancolor.coas.oregonstate.edu/cha/lan/rgb.html"],
+  ["Baton Rouge, LA", 30.446719, -91.197261, "http://oceancolor.coas.oregonstate.edu/bat/lan/rgb.html"],
+
+
 
 ]
 for (let i=0; i<sitesArr.length; i++){
