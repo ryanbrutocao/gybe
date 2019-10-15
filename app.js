@@ -11,7 +11,7 @@ var sitesArr = [
   
   // ["Charles River, Boston",42.352874, -71.103053, "http://oceancolor.coas.oregonstate.edu/cha/sen/rgb.html"],
   // ["Diamond Lake", 33.682725, -117.013607, "http://oceancolor.coas.oregonstate.edu/dia/sen/rgb.html" ],
-  ["Abelardo L Rodriguez Mexico Reservoir, Mexico", 29.066531, -110.907572, "http://oceancolor.coas.oregonstate.edu/alr/sen/rgb.html", "http://wikimapia.org/9420500/Abelardo-L-Rodriguez-Reservoir"], // not a good link, find something better
+  ["Abelardo L Rodriguez Mexico Reservoir, Mexico", 29.066531, -110.907572, "http://oceancolor.coas.oregonstate.edu/alr/sen/rgb.html", "http://wikimapia.org/9420500/Abelardo-L-Rodriguez-Reservoir"], // not a good link, find something better. Also, is this the correct body of water?
   ["Baton Rouge, LA", 30.446719, -91.197261, "http://oceancolor.coas.oregonstate.edu/bat/sen/rgb.html", "https://en.wikipedia.org/wiki/Baton_Rouge,_Louisiana"],
   // ["bar", lat, lon, "http://oceancolor.coas.oregonstate.edu/bar/sen/rgb.html", "webLink"],
   // ["bld", lat, lon, "http://oceancolor.coas.oregonstate.edu/bld/sen/rgb.html", "webLink"],
@@ -37,7 +37,7 @@ var sitesArr = [
   ["Grizzly Bay, CA", 38.125285, -122.044448, "http://oceancolor.coas.oregonstate.edu/gri/sen/rgb.html", "https://en.wikipedia.org/wiki/Grizzly_Bay"],
   // ["grv", lat, lon, "http://oceancolor.coas.oregonstate.edu/grv/sen/rgb.html", "webLink"],
   ["Hood Canal, WA", 47.602468, -122.961074, "http://oceancolor.coas.oregonstate.edu/hoo/sen/rgb.html", "https://en.wikipedia.org/wiki/Hood_Canal"],
-  ["Hopatcong Lake", 40.949438, -74.633434, "http://oceancolor.coas.oregonstate.edu/hop/sen/rgb.html", "https://en.wikipedia.org/wiki/Lake_Hopatcong"],
+  ["Hopatcong Lake, NJ", 40.949438, -74.633434, "http://oceancolor.coas.oregonstate.edu/hop/sen/rgb.html", "https://en.wikipedia.org/wiki/Lake_Hopatcong"],
   ["Indian River, FL", 28.211405, -80.645729, "http://oceancolor.coas.oregonstate.edu/ind/sen/rgb.html", "https://en.wikipedia.org/wiki/Indian_River_(Florida)"],
   // ["Adriatic Sea", 43.243398, 17.010662 ,"http://oceancolor.coas.oregonstate.edu/jad/sen/rgb.html", "https://en.wikipedia.org/wiki/Adriatic_Sea"], oceancolor link is not working
   // ["jak", lat, lon, "http://oceancolor.coas.oregonstate.edu/jak/sen/rgb.html", "webLink"],
