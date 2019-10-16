@@ -11,7 +11,7 @@ body {
   height: 100%;
   
  }
- .marker {
+ .blueMarker {
   background-image: url('./images/blue-dot-vector.svg');
   background-size: cover;
   width: 7px;
@@ -19,6 +19,20 @@ body {
   border-radius: 50%;
   cursor: pointer;
   /* fill: green; */
+}
+.redDot{
+  height: 7px;
+  width: 7px;
+  background-color: #990000;
+  border-radius: 50%;
+  display: inline-block;
+}
+.yellowDot{
+  height: 7px;
+  width: 7px;
+  background-color: #cec000;
+  border-radius: 50%;
+  display: inline-block;
 }
 /* .mapboxgl-popup {
   max-width: 200px;

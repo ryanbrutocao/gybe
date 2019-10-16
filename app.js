@@ -7,15 +7,20 @@ center: [-79.373895, 10.566320],
 zoom: 1.4
 });
 
+
+
+
+var age;
+
 var sitesArr = [
   
   // ["Charles River, Boston",42.352874, -71.103053, "http://oceancolor.coas.oregonstate.edu/cha/sen/rgb.html"],
   // ["Diamond Lake", 33.682725, -117.013607, "http://oceancolor.coas.oregonstate.edu/dia/sen/rgb.html" ],
-  ["Abelardo L Rodriguez Mexico Reservoir, Mexico", 29.066531, -110.907572, "http://oceancolor.coas.oregonstate.edu/alr/sen/rgb.html", "http://wikimapia.org/9420500/Abelardo-L-Rodriguez-Reservoir"], // not a good link, find something better. Also, is this the correct body of water?
-  ["Baton Rouge, LA", 30.446719, -91.197261, "http://oceancolor.coas.oregonstate.edu/bat/sen/rgb.html", "https://en.wikipedia.org/wiki/Baton_Rouge,_Louisiana"],
+  ["Abelardo L Rodriguez Mexico Reservoir, Mexico", 29.066531, -110.907572, "http://oceancolor.coas.oregonstate.edu/alr/sen/rgb.html", "http://wikimapia.org/9420500/Abelardo-L-Rodriguez-Reservoir", age], // not a good link, find something better. Also, is this the correct body of water?
+  ["Baton Rouge, LA", 30.446719, -91.197261, "http://oceancolor.coas.oregonstate.edu/bat/sen/rgb.html", "https://en.wikipedia.org/wiki/Baton_Rouge,_Louisiana", age],
   // ["bar", lat, lon, "http://oceancolor.coas.oregonstate.edu/bar/sen/rgb.html", "webLink"],
   // ["bld", lat, lon, "http://oceancolor.coas.oregonstate.edu/bld/sen/rgb.html", "webLink"],
-  ["Boddington, Australia", -32.797701, 116.476967, "http://oceancolor.coas.oregonstate.edu/bod/sen/rgb.html", "https://en.wikipedia.org/wiki/Boddington,_Western_Australia"],
+  ["Boddington, Australia", -32.797701, 116.476967, "http://oceancolor.coas.oregonstate.edu/bod/sen/rgb.html", "https://en.wikipedia.org/wiki/Boddington,_Western_Australia", age],
   ["Bull Run Reservoir, OR", 45.484654, -122.071313, "http://oceancolor.coas.oregonstate.edu/bul/sen/rgb.html", "https://en.wikipedia.org/wiki/Bull_Run_River_(Oregon)"],
   ["El Capitan, San Diego, CA", 32.883988, -116.808364, "http://oceancolor.coas.oregonstate.edu/cap/sen/rgb.html", "https://en.wikipedia.org/wiki/El_Capitan_Dam"],
   // ["cha", lat, lon, "http://oceancolor.coas.oregonstate.edu/cha/sen/rgb.html", "webLink"],
@@ -57,7 +62,7 @@ var sitesArr = [
   ["Ross Island, OR", 45.489956, -122.659128,"http://oceancolor.coas.oregonstate.edu/ros/sen/rgb.html", "https://en.wikipedia.org/wiki/Ross_Island_(Oregon)"],
   ["Samish Bay, WA", 48.597725, -122.475547,"http://oceancolor.coas.oregonstate.edu/sam/sen/rgb.html", "http://www.samishisland.net/about.html"], // samish island 'about' page, not wikipedia
   ["Laguna del Sauce, Uruguay", -34.825800, -55.066876, "http://oceancolor.coas.oregonstate.edu/sau/sen/rgb.html", "https://en.wikipedia.org/wiki/Laguna_del_Sauce"],
-  ["Selbay, MD", 38.911591, -76.510946, "http://oceancolor.coas.oregonstate.edu/sel/sen/rgb.html", "https://en.wikipedia.org/wiki/Selby-on-the-Bay,_Maryland"], //selby on the bay, not selby
+  ["Selbay, MD", 38.911591, -76.510946, "http://oceancolor.coas.oregonstate.edu/sel/sen/rgb.html", "https://en.wikipedia.org/wiki/Selby-on-the-Bay,_Maryland"], //selby on the bay, not selbay
   ["San Francisco Bay & Delta, CA", 38.102135, -122.050026, "http://oceancolor.coas.oregonstate.edu/sfb/sen/rgb.html", "https://en.wikipedia.org/wiki/San_Francisco_Bay"],
   ["Silverwood Lake, CA", 34.291468, -117.325807, "http://oceancolor.coas.oregonstate.edu/sil/sen/rgb.html", "https://en.wikipedia.org/wiki/Silverwood_Lake"],
   // ["sn", lat, lon, "http://oceancolor.coas.oregonstate.edu/sn/sen/rgb.html", "webLink"],
@@ -78,14 +83,39 @@ var sitesArr = [
 //   ["Charles River, Boston",42.352874, -71.103053, "http://oceancolor.coas.oregonstate.edu/cha/sen/rgb.html", "webLink"],
 
 ]
+function math (){
+  var dotColor;
+var randNum =Math.floor(Math.random()*Math.floor(10));
+if (randNum < 4){
+  console.log("age is less than 4");
+var dotColor = "redDot"
+return dotColor;
+} else if (randNum >=4 && randNum <= 7) {
+console.log("age is between 4 and 7");
+var dotColor = "yellowDot";
+return dotColor;
+
+
+} else {
+console.log("age is greater than 7");
+var dotColor = "blueMarker";
+}
+return dotColor
+}
+
+for (let i=0; i<sitesArr.length; i++){
+  console.log(sitesArr[i][3].split(".edu/")[1].split("/")[0]); //this is currently targeting the 3 digit site code. Assuming we can use this for our data to grab for recent dirty water
+}
 
 function populate() {
-
+  // var age = math()
+  
   for (let i=0; i<sitesArr.length; i++){
+
     console.log(sitesArr[i]);
     var geojson = {
       type: 'FeatureCollection',
-    features: [
+      features: [
       {
         type: 'Feature',
         geometry: {
@@ -95,7 +125,8 @@ function populate() {
         properties: {
           title: sitesArr[i][0],
           link: sitesArr[i][3], 
-          alt_link: sitesArr[i][4]
+          alt_link: sitesArr[i][4],
+          // age: math()// currently calls the math function... should instead call the function for getting time since last bad water. that function returns a number which converts the dot to a color coordinated to the time. 
         }
       },
     ]
@@ -105,13 +136,13 @@ function populate() {
     
     // create a HTML element for each feature
     var el = document.createElement('div');
-    el.className = 'marker';
+    el.className = math();
     
     // make a marker for each feature and add to the map
     new mapboxgl.Marker(el)
     .setLngLat(marker.geometry.coordinates)
     .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-    .setHTML('<h3>' + marker.properties.title + '</h3><a href="' + marker.properties.link + '">' +"Site Specific Information Here" +'</a>' + '<br><a href="' + marker.properties.alt_link + '">' +"Additional Information Here" +'</a></p>'))
+    .setHTML('<h1>'+ marker.properties.age + '</h1>'+'<h3>' + marker.properties.title + '</h3><a href="' + marker.properties.link + '">' +"Site Specific Information Here" +'</a>' + '<br><a href="' + marker.properties.alt_link + '">' +"Additional Information Here" +'</a></p>'))
     .addTo(map);
   });
   
