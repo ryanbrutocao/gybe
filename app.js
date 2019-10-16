@@ -16,11 +16,11 @@ var sitesArr = [
   
   // ["Charles River, Boston",42.352874, -71.103053, "http://oceancolor.coas.oregonstate.edu/cha/sen/rgb.html"],
   // ["Diamond Lake", 33.682725, -117.013607, "http://oceancolor.coas.oregonstate.edu/dia/sen/rgb.html" ],
-  ["Abelardo L Rodriguez Mexico Reservoir, Mexico", 29.066531, -110.907572, "http://oceancolor.coas.oregonstate.edu/alr/sen/rgb.html", "http://wikimapia.org/9420500/Abelardo-L-Rodriguez-Reservoir", age], // not a good link, find something better. Also, is this the correct body of water?
-  ["Baton Rouge, LA", 30.446719, -91.197261, "http://oceancolor.coas.oregonstate.edu/bat/sen/rgb.html", "https://en.wikipedia.org/wiki/Baton_Rouge,_Louisiana", age],
+  ["Abelardo L Rodriguez Mexico Reservoir, Mexico", 29.066531, -110.907572, "http://oceancolor.coas.oregonstate.edu/alr/sen/rgb.html", "http://wikimapia.org/9420500/Abelardo-L-Rodriguez-Reservoir"], // not a good link, find something better. Also, is this the correct body of water?
+  ["Baton Rouge, LA", 30.446719, -91.197261, "http://oceancolor.coas.oregonstate.edu/bat/sen/rgb.html", "https://en.wikipedia.org/wiki/Baton_Rouge,_Louisiana"],
   // ["bar", lat, lon, "http://oceancolor.coas.oregonstate.edu/bar/sen/rgb.html", "webLink"],
   // ["bld", lat, lon, "http://oceancolor.coas.oregonstate.edu/bld/sen/rgb.html", "webLink"],
-  ["Boddington, Australia", -32.797701, 116.476967, "http://oceancolor.coas.oregonstate.edu/bod/sen/rgb.html", "https://en.wikipedia.org/wiki/Boddington,_Western_Australia", age],
+  ["Boddington, Australia", -32.797701, 116.476967, "http://oceancolor.coas.oregonstate.edu/bod/sen/rgb.html", "https://en.wikipedia.org/wiki/Boddington,_Western_Australia"],
   ["Bull Run Reservoir, OR", 45.484654, -122.071313, "http://oceancolor.coas.oregonstate.edu/bul/sen/rgb.html", "https://en.wikipedia.org/wiki/Bull_Run_River_(Oregon)"],
   ["El Capitan, San Diego, CA", 32.883988, -116.808364, "http://oceancolor.coas.oregonstate.edu/cap/sen/rgb.html", "https://en.wikipedia.org/wiki/El_Capitan_Dam"],
   // ["cha", lat, lon, "http://oceancolor.coas.oregonstate.edu/cha/sen/rgb.html", "webLink"],
@@ -165,15 +165,7 @@ var popup = new mapboxgl.Popup({
   var description = geojson.features[0].properties.description;
   console.log("descript:", description);
   
-  // Ensure that if the map is zoomed out such that multiple
-  // copies of the feature are visible, the popup appears
-  // over the copy being pointed to.
-//   while (Math.abs(geojson.lngLat.lng - coordinates[0]) > 180) {
-//   coordinates[0] += geojson.features[0].geometry.coordinates > coordinates[0] ? 360 : -360;
-// }
 
-// Populate the popup and set its coordinates
-// based on the feature found.
 popup.setLngLat(coordinates)
 .setHTML(description)
 .addTo(map);
