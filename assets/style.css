@@ -14,22 +14,22 @@ body {
  .blueMarker {
   background-image: url('./images/blue-dot-vector.svg');
   background-size: cover;
-  width: 7px;
-  height: 7px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   cursor: pointer;
   /* fill: green; */
 }
 .redDot{
-  height: 7px;
-  width: 7px;
+  height: 12px;
+  width: 12px;
   background-color: #990000;
   border-radius: 50%;
   display: inline-block;
 }
 .yellowDot{
-  height: 7px;
-  width: 7px;
+  height: 12px;
+  width: 12px;
   background-color: #cec000;
   border-radius: 50%;
   display: inline-block;
